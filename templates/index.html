@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para mi Cora</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body style="background-image: url('https://i.pinimg.com/736x/71/7e/23/717e23e7e2c298428908bf828a8b6055.jpg')">
+    <div class="container text-center my-5" 
+    style="
+        background-image: url('https://img.freepik.com/vector-gratis/vector-fondo-borde-corazon-rojo_53876-177415.jpg'); 
+        background-size: cover;
+        width: 60%;
+        font-family: 'Great Vibes', cursive;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        border: 5px solid red;
+        border-radius: 10px;
+        padding: 20px;">
+
+        <h1 style="font-size: 75px; color: white;">¡Feliz 14 de Febrero mi princesa!</h1>
+        <h3><button id="mostrarMensaje" class="btn btn-danger">Aquí hay un mensajito para ti</button></h3>
+        <div id="mensaje" style="margin-left: 10%; margin-right: 10%; display: none;">
+            <p>
+                Puede que no nos conozcamos de hace mucho, también puede que no coincidamos en algunas cosas, 
+                puede que estemos muy lejos; pero si supieras lo que siento cada vez que te escucho o leo un mensaje 
+                tuyo te darías cuenta de que nada de eso es importante ni suficiente para calmar las ganas que tengo 
+                de amarte para toda la vida.
+            </p>
+            <p>Te amo mi amor</p>
+            <br/>
+            <p>Att: Gabriel</p>
+        </div>
+        <br/>
+        <img src="https://lh3.googleusercontent.com/proxy/T0iQF9jqqVZUJbwgVd-e1sJYQxTTjB9xaOarcAxmwtviCIXG0OXK0w8-M7uY2Iu2kWiHDyVjtOTW0cHUfRro">
+        <br/><br/>
+        <audio controls>
+            <source src="{{ url_for('static', filename='cancion.mp3') }}" type="audio/mpeg">
+            <source src="{{ url_for('static', filename='cancion.ogv') }}" type="audio/ogg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+
+        <script>
+            // JavaScript para mostrar u ocultar el mensaje al hacer clic en el botón
+            const boton = document.getElementById('mostrarMensaje');
+            const mensaje = document.getElementById('mensaje');
+            let mensajeVisible = false;
+
+            boton.addEventListener('click', function() {
+                if (mensajeVisible) {
+                    mensaje.style.display = 'none';
+                    mensajeVisible = false;
+                } else {
+                    mensaje.style.display = 'block';
+                    mensajeVisible = true;
+                }
+            });
+        </script>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html>
